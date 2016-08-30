@@ -10,14 +10,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".View.LoginActivity"></activity>
         <activity android:name=".View.LandingActivity"></activity>
-        <activity android:name=".View.MainActivity">
+        <activity android:name=".View.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.RegistroActivity"></activity>
+        <activity android:name=".View.Registro"></activity>
 
     </application>
 

@@ -14,7 +14,7 @@ import com.example.wladimir.androidmvc.R;
  * Created by Wladimir on 29/08/2016.
  */
 
-public class RegistroActivity extends AppCompatActivity {
+public class Registro extends AppCompatActivity {
 
     EditText nombre;
     EditText apellido;
@@ -39,8 +39,8 @@ public class RegistroActivity extends AppCompatActivity {
 
     }
 
-    public void registrar (View v){
-        if(AppController.getInstance().IsValidPass(contraseña.getText().toString(),ccontraseña.getText().toString())){
+    public void guardar(View v) {
+        if (AppController.getInstance().IsValidPass(contraseña.getText().toString(), ccontraseña.getText().toString())) {
             AppController.getInstance().llenar(nombre.getText().toString(), apellido.getText().toString(),
                     userName.getText().toString(), contraseña.getText().toString(), Integer.parseInt(edad.getText().toString()));
 
@@ -52,7 +52,7 @@ public class RegistroActivity extends AppCompatActivity {
             edad.setText("");
             ccontraseña.setText("");
 
-        }else{
+        } else {
             Toast.makeText(this, "Las contraseñas no son iguales", Toast.LENGTH_SHORT).show();
 
             contraseña.setText("");

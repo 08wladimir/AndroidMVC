@@ -1,8 +1,15 @@
 package com.example.wladimir.androidmvc.Controller;
 
-import com.example.wladimir.androidmvc.Domain.User;
 import java.util.ArrayList;
 import java.util.List;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Toast;
+import com.example.wladimir.androidmvc.Domain.User;
+import com.example.wladimir.androidmvc.View.LandingActivity;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by Wladimir on 27/08/2016.
@@ -20,17 +27,17 @@ public class AppController {
         return _instance;
     }
 
-    public void llenar (String nombre, String apelllido,  String usuario,  String contraseña, int edad) {
-        fillDateBases(nombre, apelllido, usuario, contraseña, edad);
+    public void llenar (String nombre, String apelllido,  String usuario,  String password, int edad) {
+        fillDateBases(nombre, apelllido, usuario, password, edad);
     }
 
-    private void fillDateBases(String nombre, String apelllido,  String usuario,  String contraseña, int edad) {
+    private void fillDateBases(String nombre, String apelllido,  String usuario,  String password, int edad) {
         //Add users
-        fillUsers(nombre, apelllido, usuario, contraseña, edad);
+        fillUsers(nombre, apelllido, usuario, password, edad);
     }
 
-    private void fillUsers(String nombre, String apelllido,  String usuario,  String contraseña, int edad) {
-        User person1 = new User(nombre, apelllido, usuario, contraseña, edad);
+    private void fillUsers(String nombre, String apelllido,  String usuario,  String password, int edad) {
+        User person1 = new User(nombre, apelllido, usuario, password, edad);
         users.add(person1);
 
     }
@@ -47,9 +54,9 @@ public class AppController {
         return resp;
     }
 
-    public boolean IsValidPass(String contraseña, String ccontraseña) {
+    public boolean IsValidPass(String password, String confpassword) {
         Boolean resp = false;
-        if (contraseña.equals(ccontraseña)) {
+        if (password.equals(confpassword)) {
             resp = true;
         }
         return resp;

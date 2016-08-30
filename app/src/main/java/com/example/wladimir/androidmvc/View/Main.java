@@ -10,7 +10,7 @@ import com.example.wladimir.androidmvc.R;
 /**
  * Created by Wladimir on 29/08/2016.
  */
-public class MainActivity extends AppCompatActivity {
+public class Main extends AppCompatActivity {
 
     Button btnIniciar;
     Button btnRegistro;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 
-                Intent iniciar = new Intent(MainActivity.this, LoginActivity.class);
+                Intent iniciar = new Intent(Main.this, LoginActivity.class);
                 startActivity(iniciar);
             }
         });
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 
-                Intent registro = new Intent(MainActivity.this, RegistroActivity.class);
+                Intent registro = new Intent(Main.this, Registro.class);
                 startActivity(registro);
             }
         });
